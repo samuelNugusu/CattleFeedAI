@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+*.egg-info/
+dist/
+build/
+*.log
+
+# Node.js
+node_modules/
+dist/
+*.log
+.npm/
+.vuepress/
+
+# VS Code
+.vscode/
+
+# Database
+*.sqlite3
+*.sql
+*.bak
+
+# OS generated files
+.DS_Store
+Thumbs.db

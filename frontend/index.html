@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CattlefeedAI - Optimize Livestock Feeding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">CattlefeedAI</div>
+    <div class="menu-toggle">☰</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#ai-recommendations">AI Recommendations</a></li>
+      <li><a href="#manage-data">Manage Data</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-options">
+      <button id="dark-mode-toggle">🌙</button>
+      <select id="language-selector">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+      </select>
+      <button id="login-btn" class="nav-button">Login</button>
+      <button id="signup-btn" class="nav-button">Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Optimize Livestock Feeding with AI</h1>
+      <p class="hero-subtitle">Maximize efficiency and health with CattlefeedAI</p>
+      <div class="hero-buttons">
+        <button class="cta-button primary">Get Started</button>
+        <a href="#features" class="cta-button secondary">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <p>Farms Optimized</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10K+</div>
+          <p>Livestock Managed</p>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">30%</div>
+          <p>Cost Reduction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section">
+    <div class="content">
+      <h2 class="section-heading">Features</h2>
+      <p class="section-description">Discover how CattlefeedAI can transform your farm operations.</p>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1500595046743-ee5a570e46d2" alt="Feed Optimization">
+          <h3>Feed Optimization</h3>
+          <p>AI-driven feed plans tailored for each animal.</p>
+          <button class="feature-details">Learn More</button>
+        </div>
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1500595046743-ee5a570e46d2" alt="Health Monitoring">
+          <h3>Health Monitoring</h3>
+          <p>Track livestock health with real-time insights.</p>
+          <button class="feature-details">Learn More</button>
+        </div>
+        <div class="feature-card">
+          <img src="https://images.unsplash.com/photo-1500595046743-ee5a570e46d2" alt="Analytics Dashboard">
+          <h3>Analytics Dashboard</h3>
+          <p>Comprehensive data to make informed decisions.</p>
+          <button class="feature-details">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Recommendations Section -->
+  <section id="ai-recommendations" class="section">
+    <div class="content">
+      <h2 class="section-heading">AI Recommendations</h2>
+      <p class="section-description">Get personalized AI-driven recommendations for your livestock.</p>
+      <div class="ai-recommendation-section">
+        <h3>Request a New Recommendation</h3>
+        <select id="livestock-selector" class="form-input">
+          <option value="">Select Livestock</option>
+        </select>
+        <button id="get-recommendation-btn" class="cta-button primary">Get Recommendation</button>
+        <div id="recommendation-result" class="recommendation-result"></div>
+      </div>
+      <div class="recommendation-history">
+        <h3>Recommendation History</h3>
+        <table id="recommendation-table">
+          <thead>
+            <tr>
+              <th>Livestock</th>
+              <th>Type</th>
+              <th>Recommendation</th>
+              <th>Confidence</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="recommendation-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manage Data Section -->
+  <section id="manage-data" class="section">
+    <div class="content">
+      <h2 class="section-heading">Manage Your Data</h2>
+      <p class="section-description">Add and manage your farm data easily.</p>
+      <div class="data-management">
+        <button id="add-farm-btn" class="cta-button primary">Add Farm</button>
+        <button id="add-livestock-btn" class="cta-button primary">Add Livestock</button>
+        <button id="add-feed-plan-btn" class="cta-button primary">Add Feed Plan</button>
+        <button id="add-health-record-btn" class="cta-button primary">Add Health Record</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section">
+    <div class="content">
+      <h2 class="section-heading">Pricing</h2>
+      <p class="section-description">Choose a plan that fits your farm's needs.</p>
+      <div class="pricing-toggle">
+        <button class="toggle-btn active" data-plan="monthly">Monthly</button>
+        <button class="toggle-btn" data-plan="yearly">Yearly</button>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Basic</h3>
+          <div class="price monthly-price">$10<span>/month</span></div>
+          <div class="price yearly-price" style="display: none;">$100<span>/year</span></div>
+          <ul>
+            <li>Up to 50 animals</li>
+            <li>Basic analytics</li>
+            <li>Email support</li>
+          </ul>
+          <button class="cta-button primary">Choose Plan</button>
+        </div>
+        <div class="pricing-card popular">
+          <h3>Pro</h3>
+          <div class="price monthly-price">$25<span>/month</span></div>
+          <div class="price yearly-price" style="display: none;">$250<span>/year</span></div>
+          <ul>
+            <li>Up to 200 animals</li>
+            <li>Advanced analytics</li>
+            <li>Priority support</li>
+          </ul>
+          <button class="cta-button primary">Choose Plan</button>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <div class="price monthly-price">$50<span>/month</span></div>
+          <div class="price yearly-price" style="display: none;">$500<span>/year</span></div>
+          <ul>
+            <li>Unlimited animals</li>
+            <li>Custom analytics</li>
+            <li>24/7 support</li>
+          </ul>
+          <button class="cta-button primary">Choose Plan</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="content">
+      <h2 class="section-heading">About Us</h2>
+      <p class="section-description">Learn more about our mission to revolutionize livestock farming.</p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>We are a team dedicated to using AI to improve farm efficiency and animal health.</p>
+        </div>
+        <div class="about-text">
+          <p>Founded in 2023, CattlefeedAI combines technology and agriculture for sustainable farming.</p>
+        </div>
+      </div>
+      <h3>Our Team</h3>
+      <div class="team-members">
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Team Member">
+          <h4>John Doe</h4>
+          <p>CEO</p>
+        </div>
+        <div class="team-member">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Team Member">
+          <h4>Jane Smith</h4>
+          <p>CTO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section">
+    <div class="content">
+      <h2 class="section-heading">Testimonials</h2>
+      <p class="section-description">Hear from farmers who trust CattlefeedAI.</p>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1500595046743-ee5a570e46d2" alt="Farm">
+          <p>"CattlefeedAI increased our productivity by 20%!"</p>
+          <div class="rating">★★★★★</div>
+        </div>
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1500595046743-ee5a570e46d2" alt="Farm">
+          <p>"The AI recommendations are a game-changer."</p>
+          <div class="rating">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="content">
+      <h2 class="section-heading">Contact Us</h2>
+      <p class="section-description">Get in touch with us for support or inquiries.</p>
+      <div class="contact-content">
+        <form id="contact-form" class="auth-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p>Email: <a href="mailto:support@cattlefeedai.com">support@cattlefeedai.com</a></p>
+          <p>Phone: +1-800-555-1234</p>
+          <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="section">
+    <div class="content">
+      <h2 class="section-heading">How It Works</h2>
+      <p class="section-description">A simple process to get started with CattlefeedAI.</p>
+      <div class="process-steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Sign Up</h3>
+          <p>Create your account and set up your farm.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Add Livestock</h3>
+          <p>Input your livestock details for personalized insights.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Get Insights</h3>
+          <p>Receive AI-driven recommendations for feed and health.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section">
+    <div class="content">
+      <h2 class="section-heading">Blog</h2>
+      <p class="section-description">Latest updates and tips for livestock farming.</p>
+      <div class="blog-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="feeding">Feeding</button>
+        <button class="filter-btn" data-filter="health">Health</button>
+      </div>
+      <div class="blog-cards">
+        <div class="blog-card" data-category="feeding">
+          <img src="https://images.unsplash.com/photo-1500595046743-ee5a570e46d2" alt="Blog Post">
+          <h3>Optimizing Feed Efficiency</h3>
+          <p>Learn how to reduce costs with AI.</p>
+          <a href="#" class="blog-link">Read More</a>
+        </div>
+        <div class="blog-card" data-category="health">
+          <img src="https://images.unsplash.com/photo-1500595046743-ee5a570e46d2" alt="Blog Post">
+          <h3>Health Monitoring Tips</h3>
+          <p>Keep your livestock healthy with these tips.</p>
+          <a href="#" class="blog-link">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section">
+    <div class="content">
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+      <p class="section-description">Find answers to common questions about CattlefeedAI.</p>
+      <div class="faq-items">
+        <div class="faq-item">
+          <h3>How does CattlefeedAI use AI?</h3>
+          <p>We analyze livestock data like age, weight, and health records to provide personalized feed and health
+            recommendations.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is my farm data secure?</h3>
+          <p>Yes, we use industry-standard encryption and security practices to protect your data.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I use CattlefeedAI on multiple devices?</h3>
+          <p>Absolutely! Our platform is web-based and accessible from any device with a browser.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What support options are available?</h3>
+          <p>We offer email support for all plans, with priority and 24/7 support for Pro and Enterprise users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: <a href="mailto:support@cattlefeedai.com">support@cattlefeedai.com</a></p>
+        <p>Phone: +1-800-555-1234</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <p><a href="#">Facebook</a></p>
+        <p><a href="#">Twitter</a></p>
+        <p><a href="#">Instagram</a></p>
+      </div>
+    </div>
+    <p>© 2025 CattlefeedAI. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top and Chat -->
+  <button id="scroll-to-top">⬆</button>
+  <div class="chat-button">💬</div>
+  <div class="chat-box">
+    <div class="chat-header">Chat with Us</div>
+    <div id="chat-messages" class="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="Type a message...">
+  </div>
+
+  <!-- Modals -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required>
+        </div>
+        <button type="submit" class="submit-button">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="signup-name">Name</label>
+          <input type="text" id="signup-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-email">Email</label>
+          <input type="email" id="signup-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input type="password" id="signup-password" name="password" required>
+        </div>
+        <button type="submit" class="submit-button">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h2>Success</h2>
+      <p>Action completed successfully!</p>
+    </div>
+  </div>
+
+  <div id="feature-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <div id="feature-details"></div>
+    </div>
+  </div>
+
+  <div id="farm-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h2>Add Farm</h2>
+      <form id="farm-form">
+        <div class="form-group">
+          <label for="farm-name">Farm Name</label>
+          <input type="text" id="farm-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="farm-location">Location</label>
+          <input type="text" id="farm-location" name="location" required>
+        </div>
+        <button type="submit" class="submit-button">Add Farm</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="livestock-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h2>Add Livestock</h2>
+      <form id="livestock-form">
+        <div class="form-group">
+          <label for="livestock-farm">Farm</label>
+          <select id="livestock-farm" name="farmId" class="form-input" required>
+            <option value="">Select Farm</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="livestock-type">Type</label>
+          <input type="text" id="livestock-type" name="type" required>
+        </div>
+        <div class="form-group">
+          <label for="livestock-animalId">Animal ID</label>
+          <input type="text" id="livestock-animalId" name="animalId" required>
+        </div>
+        <div class="form-group">
+          <label for="livestock-age">Age (years)</label>
+          <input type="number" id="livestock-age" name="age" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="livestock-weight">Weight (kg)</label>
+          <input type="number" id="livestock-weight" name="weight" step="0.1" required>
+        </div>
+        <button type="submit" class="submit-button">Add Livestock</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="feed-plan-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h2>Add Feed Plan</h2>
+      <form id="feed-plan-form">
+        <div class="form-group">
+          <label for="feed-plan-livestock">Livestock</label>
+          <select id="feed-plan-livestock" name="livestockId" class="form-input" required>
+            <option value="">Select Livestock</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="feed-plan-feedType">Feed Type</label>
+          <input type="text" id="feed-plan-feedType" name="feedType" required>
+        </div>
+        <div class="form-group">
+          <label for="feed-plan-quantity">Quantity (kg)</label>
+          <input type="number" id="feed-plan-quantity" name="quantity" step="0.1" required>
+        </div>
+        <div class="form-group">
+          <label for="feed-plan-date">Date</label>
+          <input type="date" id="feed-plan-date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="feed-plan-notes">Notes</label>
+          <textarea id="feed-plan-notes" name="notes"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Add Feed Plan</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="health-record-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <h2>Add Health Record</h2>
+      <form id="health-record-form">
+        <div class="form-group">
+          <label for="health-record-livestock">Livestock</label>
+          <select id="health-record-livestock" name="livestockId" class="form-input" required>
+            <option value="">Select Livestock</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="health-record-condition">Condition</label>
+          <input type="text" id="health-record-condition" name="condition" required>
+        </div>
+        <div class="form-group">
+          <label for="health-record-date">Date</label>
+          <input type="date" id="health-record-date" name="date" required>
+        </div>
+        <div class="form-group">
+          <label for="health-record-notes">Notes</label>
+          <textarea id="health-record-notes" name="notes"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Add Health Record</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Load JavaScript -->
+  <script defer src="script.js"></script>
+</body>
+
+</html>
