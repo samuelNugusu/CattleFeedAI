@@ -44,7 +44,7 @@ Agritech startups can integrate AI for livestock management.
 
 Clone the repository:
 
-git clone https://github.com/your-username/CattleFeedAI.git
+git clone https://github.com/samuelNugusu/CattleFeedAI.git
 cd CattleFeedAI
 
 
